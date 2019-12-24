@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 20%;
+            position: absolute;
+            right: 80%;
+            top: 0%;
+            bottom: 0%;
+            background: #161b38;
+            color: aliceblue;
+          
+
+        }
+
+        .sidebar1 {
+            height: 100%;
+            width: 80%;
+            left: 20%;
+            top: 0%;
+            bottom: 0%;
+            position: relative;
+        }
+
+        .sidebar .bord {
+            padding-bottom: 8px;
+            padding-top: 8px;
+            border-bottom: 1px solid #3a3a3a;
+        }
+
+        .bord:hover {
+            background: #2b304b;
+        }
+
+        .bord2 {
+            background: #ccc;
+            padding-bottom: 11px;
+            padding-top: 11px;
+
+        }
+
+        .data-source {
+            display: block;
+
+        }
+
+        .div1 {
+            background: #2ebfbf;
+
+
+        }
+
+        .div2 {
+            background: #ea1e65;
+
+        }
+
+        .div3 {
+            background: #ffe140;
+
+        }
+
+        .div4 {
+            background: #4aafff;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            font-size: xx-large;
+        }
+
+        .parent-width {
+            height: 100%;
+            width: 100%;
+        }
+
+        .child-width {
+            min-width: 90%;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .font {
+            font-weight: 500;
+            font-size: x-large;
+        }
+
+        .mid-content {
+            border: 1px solid #ccc;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+        .font1 {
+            font-size: large;
+        }
+
+        .left-side-bar {
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left-side-bar">
+            <div class="sidebar">
+                <div class="bord pl-3">
+                    <span>Analytics</span>
+                    <span style="padding-left: 150px;"><i class="fas fa-bars"></i></span>
+                </div>
+                <div class="bord pl-2">
+                    <input type="text" placeholder="Search..">
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-home"></i>&nbsp Home</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-globe-asia"></i>&nbsp Web Analytics</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-search"></i>&nbsp Federated Search</span>
+                </div>
+                <div class="bord pl-3">
+                    <span></span><i class="fas fa-database"></i>&nbsp Database</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-pager"></i>&nbsp Web Site</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-file-csv"></i>&nbsp CSV</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fab fa-trello"></i>&nbsp Eloqua</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-cloud"></i>&nbsp Saleforce</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-folder-open"></i>&nbsp LDAP</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-box-open"></i>&nbsp Open Data Source</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="far fa-window-maximize"></i>&nbsp HTTP</span>
+                </div>
+                <div class="bord pl-3">
+                    <span><i class="fas fa-network-wired"></i>&nbsp NAS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar1">
+            <div class="bord pl-4" style="background: #161b38; border-left:1px solid aliceblue">
+                <span style="color:aliceblue;">Analytics</span>
+                <span style="color:aquamarine;"> > </span>
+                <span style="color:aquamarine;">Home</span>
+            </div>
+            <div class="bord2 pl-3 pr-3">
+                <span>Home</span>
+                <span class="pl-1 pr-1" style="float:right;background: #2c335f;              
+                border-radius:2px;color: aliceblue">View All</span>
+            </div>
+            <div class="row no-gutters pt-3 pb-3">
+                <div class="col-3 parent-width ">
+                    <div class="row no-gutters div1 child-width">
+                        <div class="col-8 pl-3">
+                            <span class="data-source font">33</span>
+                            <span>Data Sources</span>
+                        </div>
+                        <div class="col-4 icon">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 parent-width">
+                    <div class="row no-gutters div2 child-width">
+                        <div class="col-8 pl-3">
+                            <span class="data-source font">33</span>
+                            <span>Data Sources</span>
+                        </div>
+                        <div class="col-4 icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 parent-width">
+                    <div class="row no-gutters div3 child-width">
+                        <div class="col-8 pl-3">
+                            <span class="data-source font">33</span>
+                            <span>Data Sources</span>
+                        </div>
+                        <div class="col-4 icon">
+                            <i class="far fa-clone"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 parent-width">
+                    <div class="row no-gutters div4 child-width">
+                        <div class="col-8 pl-3">
+                            <span class="data-source font">33</span>
+                            <span>Data Sources</span>
+                        </div>
+                        <div class="col-4 icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bord2 ml-2 mr-2">
+                <span>&nbsp Data Connectors</span>
+            </div>
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-globe-asia"></i>&nbsp Web Analytics</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-search"></i>&nbsp Federated Search</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row  mid-content child-width pl-3">
+                        <span><i class="fas fa-search"></i>&nbsp Federated Search</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span></span><i class="fas fa-database"></i>&nbsp Database</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row  mid-content child-width pl-3">
+                        <span><i class="fas fa-pager"></i>&nbsp Web Site</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-file-csv"></i>&nbsp CSV</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row  mid-content child-width pl-3">
+                        <span><i class="fab fa-trello"></i>&nbsp Eloqua</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-cloud"></i>&nbsp Saleforce</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row  mid-content child-width pl-3">
+                        <span><i class="fas fa-folder-open"></i>&nbsp LDAP</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-box-open"></i>&nbsp Open Data Source</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row no-gutters pt-3 font1">
+                <div class="col-6 parent-width">
+                    <div class="row  mid-content child-width pl-3">
+                        <span><i class="far fa-window-maximize"></i></span>
+                        <span>&nbsp HTTP</span>
+                    </div>
+                </div>
+                <div class="col-6 parent-width">
+                    <div class="row mid-content child-width pl-3">
+                        <span><i class="fas fa-network-wired"></i>&nbsp NAS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
